@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TinyApp</title>
+</head>
+<body>
+  <h1>Link Editor</h1>
+  <ul>
+    <% for(var key in urls){  %> 
+     <form method="POST" action="/urls/<%= key %>/delete">
+    <li> <%= key %> : <%=  urls[key] %> <button> Delete </button> </form> <a href="urls/<%=key%>"> Update </a></li> 
+    
+    <% } %>
+  </ul>
+
+  
+  
+ 
+  
+
+</body>
+</html>
+
+
+
