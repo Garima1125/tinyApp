@@ -1,0 +1,12 @@
+
+<% if(username){ %>
+  <form action="/logout" method= "POST"> <h2>Welcome <%= username %> <button>Logout</button> </h2></form>  
+   
+<%}else{%>
+  <form action= "/login" method="POST">
+   <label> Enter your Username</label>
+   <input  type="text" name="username"> 
+   <button> Sign in </button>
+   <h2>Hello <%= username %> !!</h2>
+</form>
+<%}%>

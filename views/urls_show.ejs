@@ -5,7 +5,7 @@
   <title>TinyApp</title>
 </head>
 <body>
-  <h4>Short Url  :   Long Url</h4>
+  <% include partials/_header %><h4>Short Url  :   Long Url</h4>
   <p><%= shortURL%>: <%=long%></p>
   <form method="POST" action="/urls/<%=shortURL%>">
     <div>
