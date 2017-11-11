@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <meta charset="UTF-8">
   <title>TinyApp</title>
 </head>
 <body>
   <% include partials/_header %>
-
-  <h4>Short Url  :   Long Url</h4>
-  <%= shortURL%>: <%=long%>
-  <form method="POST" action="/urls/<%=shortURL%>">
-    <div>
-    <input type="text" name="longUrl"> <button> update </button> </form>
+  <div style="margin-left: 10px;">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <td style="font-weight: bold;">Short URL </td>
+          <td style="font-weight: bold;"">Long URL</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= shortURL%> </td>
+          <td><%=long%></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <form method="POST" action="/urls/<%=shortURL%>" style="margin-left: 10px; margin-top: 50px">
+    <div class="form-group">
+      <label>Enter the new URL here:</label>
+      <input type="text" name="longUrl" class="form-control">
+      <button class="btn btn-warning" style="margin-top: 20px;"> Update </button>
+      <a href="/urls" class="btn btn-primary" style="margin-top: 20px;"> Back </a>
+    </div>
+  </form>
 </body>
 </html>
 

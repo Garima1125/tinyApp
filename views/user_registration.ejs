@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title></title>
-</head>
-<body>
-  <h3>Please fill the details below</h3>
-<form action="/register" method="POST">
-  <label>Enter your email</label>
-  <input type="email" name="email">
-  <label>Choose your password</label>
-  <input type="password" name="password"></input>
-<button>Register</button>
-</form>
-</body>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <title></title>
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1>Welcome to Tiny App</h1>
+        <img src="https://cdn2.iconfinder.com/data/icons/mosaicon-11/512/cut-512.png" alt= 'picture of scissor' height="80" width="80" style = "float: right;">
+        <h3>Please fill the details below to create a new account !!</h3>
+      </div>
+    </div>
+    <form action="/register" method="POST" style = "margin: 10px">
+      <div class="form-group">
+        <label>Enter your email</label>
+        <input type="email" name="email" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Choose your password</label>
+        <input type="password" name="password" class="form-control"></input>
+      </div>
+      <button class="btn btn-primary">Register</button>
+    </form>
+  </body>
 </html>

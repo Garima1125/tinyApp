@@ -1,7 +1,15 @@
-
 <% if(user_id){ %>
-  <form action="/logout" method= "POST"> <h2>Welcome <%= user_id %> <button>Logout</button> </h2></form>
+<form action="/logout" method= "POST" style="margin:10px">
+  <h2>Welcome <%= users[user_id].email %>
+    <button class="btn btn-dark" style="float:right;">Logout</button>
+  </h2>
+</form>
 <%} else {%>
-<a href="register"> Register here </a>  
-<a href="login"> login here </a>  
+<div class="alert alert-primary" role="alert">
+Sorry, We don't recognize you!! Please register or login using links below :
+</div>
+<div style="text-align: center;">
+  <a href="register" class="btn btn-primary"> Register here </a>
+  <a href="login" class="btn btn-success" style="margin-left:100px;"> Login here </a>
+</div>
 <%}%>

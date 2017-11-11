@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head></head>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  </head>
   <body style="font-size:20px;">
     <% include partials/_header %>
-    <form action="/urls" method="POST">
-      <label for="longUrl">Enter a URL:</label>
-      <input id="longUrl" type="text" name="longUrl" placeholder="http://" style="width: 300px">
-      <input type="submit" value="Submit">
+    <form action="/urls" method="POST" style="margin:10px;padding-top: 20px">
+      <div class="form-group">
+        <label for="longUrl">Enter a URL:</label>
+        <input id="longUrl" class="form-control" type="text" name="longUrl" placeholder="http://" style="width: 300px">
+      </div>
+      <input type="submit" class="btn btn-success"" value="Submit">
     </form>
   </body>
 </html>

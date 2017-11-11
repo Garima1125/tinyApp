@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <meta charset="UTF-8">
   <title>TinyApp</title>
 </head>
 <body>
   <% include ./partials/_header %>
-  <h1>Link Editor</h1>
-  <ul>
-    <% for(var key in urls){  %> 
-     <form method="POST" action="/urls/<%= key %>/delete">
-    <li> <%= key %> : <%=  urls[key] %> <a href="urls/<%=key%>"> Update </a><button> Delete </button> </form> </li> 
-    
+  <ul class="list-group">
+    <% for(var key in urls){  %>
+    <form method="POST" action="/urls/<%= key %>/delete">
+      <li class="list-group-item"> <%= key %> : <%=  urls[key]['longUrl'] %>
+        <a href="/urls/<%=key%>" class="btn btn-warning" style="margin-left: 50px;"> Update </a>
+        <button class="btn btn-danger" style="margin-left: 50px;"> Delete </button>
+      </li>
+    </form>
     <% } %>
+    <a href="/urls/new" class="btn btn-primary" style="margin-left: 10px;margin-top: 50px;"> Add new Short URL </a>
   </ul>
 </body>
 </html>
