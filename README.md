@@ -5,8 +5,11 @@ TinyApp is a full stack web application built with Node and Express that allows 
 
 ## Final Product
 
-!["screenshot description"](#)
-!["screenshot description"](#)
+!["screenshot of login page"](https://github.com/Garima1125/tinyApp/blob/master/docs/login_page.png?raw=true)
+!["screenshot of registration page"](https://github.com/Garima1125/tinyApp/blob/master/docs/registration_page.png?raw=true)
+!["screenshot of URL update page"](https://github.com/Garima1125/tinyApp/blob/master/docs/url_update_page.png?raw=true)
+!["screenshot of URL page"](https://github.com/Garima1125/tinyApp/blob/master/docs/urls-page.png?raw=true)
+!["screenshot of URL page without login"](https://github.com/Garima1125/tinyApp/blob/master/docs/urls_page_without_login.png?raw=true)
 
 ## Dependencies
 
